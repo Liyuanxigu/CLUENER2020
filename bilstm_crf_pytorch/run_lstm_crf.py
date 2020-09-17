@@ -205,7 +205,7 @@ def main():
     parser.add_argument("--arch",default='bilstm_crf',type=str)
     parser.add_argument('--learning_rate',default=0.001,type=float)
     parser.add_argument('--seed',default=1234,type=int)
-    parser.add_argument('--gpu',default='0',type=str)
+    parser.add_argument('--gpu',default='',type=str)
     parser.add_argument('--epochs',default=50,type=int)
     parser.add_argument('--batch_size',default=32,type=int)
     parser.add_argument('--embedding_size',default=128,type=int)
