@@ -1,0 +1,94 @@
+Process rank: -1, device: cpu, n_gpu: 0, distributed training: False, 16-bits training: False
+loading configuration file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/config.json
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 34,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 21128
+}
+
+Model name '/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base' is a path or url to a directory containing tokenizer files.
+Didn't find file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/added_tokens.json. We won't load it.
+Didn't find file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/special_tokens_map.json. We won't load it.
+Didn't find file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/tokenizer_config.json. We won't load it.
+loading file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/vocab.txt
+loading file None
+loading file None
+loading file None
+loading weights file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/pytorch_model.bin
+Weights of BertCrfForNer not initialized from pretrained model: ['classifier.weight', 'classifier.bias', 'crf.start_transitions', 'crf.end_transitions', 'crf.transitions']
+Weights from pretrained model not used in BertCrfForNer: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, adv_epsilon=1.0, adv_name='word_embeddings', cache_dir='', config_name='', crf_learning_rate=0.001, data_dir='/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/datasets/cluener/', device=device(type='cpu'), do_adv=False, do_eval=True, do_lower_case=True, do_predict=False, do_train=True, eval_all_checkpoints=False, eval_max_seq_length=512, evaluate_during_training=False, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, id2label={0: 'X', 1: 'B-address', 2: 'B-book', 3: 'B-company', 4: 'B-game', 5: 'B-government', 6: 'B-movie', 7: 'B-name', 8: 'B-organization', 9: 'B-position', 10: 'B-scene', 11: 'I-address', 12: 'I-book', 13: 'I-company', 14: 'I-game', 15: 'I-government', 16: 'I-movie', 17: 'I-name', 18: 'I-organization', 19: 'I-position', 20: 'I-scene', 21: 'S-address', 22: 'S-book', 23: 'S-company', 24: 'S-game', 25: 'S-government', 26: 'S-movie', 27: 'S-name', 28: 'S-organization', 29: 'S-position', 30: 'S-scene', 31: 'O', 32: '[START]', 33: '[END]'}, label2id={'X': 0, 'B-address': 1, 'B-book': 2, 'B-company': 3, 'B-game': 4, 'B-government': 5, 'B-movie': 6, 'B-name': 7, 'B-organization': 8, 'B-position': 9, 'B-scene': 10, 'I-address': 11, 'I-book': 12, 'I-company': 13, 'I-game': 14, 'I-government': 15, 'I-movie': 16, 'I-name': 17, 'I-organization': 18, 'I-position': 19, 'I-scene': 20, 'S-address': 21, 'S-book': 22, 'S-company': 23, 'S-game': 24, 'S-government': 25, 'S-movie': 26, 'S-name': 27, 'S-organization': 28, 'S-position': 29, 'S-scene': 30, 'O': 31, '[START]': 32, '[END]': 33}, learning_rate=3e-05, local_rank=-1, logging_steps=448, loss_type='ce', markup='bios', max_grad_norm=1.0, max_steps=-1, model_name_or_path='/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base', model_type='bert', n_gpu=0, no_cuda=False, num_train_epochs=4.0, output_dir='/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/outputs/cluener_output/bert', overwrite_cache=False, overwrite_output_dir=True, per_gpu_eval_batch_size=24, per_gpu_train_batch_size=24, predict_checkpoints=0, save_steps=448, seed=42, server_ip='', server_port='', task_name='cluener', tokenizer_name='', train_max_seq_length=128, warmup_proportion=0.1, weight_decay=0.01)
+Creating features from dataset file at /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/datasets/cluener/
+Writing example 0 of 10748
+*** Example ***
+guid: train-0
+tokens: [CLS] 浙 商 银 行 企 业 信 贷 部 叶 老 桂 博 士 则 从 另 一 个 角 度 对 五 道 门 槛 进 行 了 解 读 。 叶 老 桂 认 为 ， 对 目 前 国 内 商 业 银 行 而 言 ， [SEP]
+input_ids: 101 3851 1555 7213 6121 821 689 928 6587 6956 1383 5439 3424 1300 1894 1156 794 1369 671 702 6235 2428 2190 758 6887 7305 3546 6822 6121 749 6237 6438 511 1383 5439 3424 6371 711 8024 2190 4680 1184 1744 1079 1555 689 7213 6121 5445 6241 8024 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 31 3 13 13 13 31 31 31 31 31 7 17 17 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: train-1
+tokens: [CLS] 生 生 不 息 c s o l 生 化 狂 潮 让 你 填 弹 狂 扫 [SEP]
+input_ids: 101 4495 4495 679 2622 145 161 157 154 4495 1265 4312 4060 6375 872 1856 2486 4312 2812 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 31 31 31 31 31 4 14 14 14 31 31 31 31 31 31 31 31 31 31 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: train-2
+tokens: [CLS] 那 不 勒 斯 v s 锡 耶 纳 以 及 桑 普 v s 热 那 亚 之 上 呢 ？ [SEP]
+input_ids: 101 6929 679 1239 3172 164 161 7234 5456 5287 809 1350 3433 3249 164 161 4178 6929 762 722 677 1450 8043 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 31 8 18 18 18 31 31 8 18 18 31 31 8 18 31 31 8 18 18 31 31 31 31 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: train-3
+tokens: [CLS] 加 勒 比 海 盗 3 ： 世 界 尽 头 》 的 去 年 同 期 成 绩 死 死 甩 在 身 后 ， 后 者 则 即 将 赶 超 《 变 形 金 刚 》 ， [SEP]
+input_ids: 101 1217 1239 3683 3862 4668 124 8038 686 4518 2226 1928 518 4638 1343 2399 1398 3309 2768 5327 3647 3647 4501 1762 6716 1400 8024 1400 5442 1156 1315 2199 6628 6631 517 1359 2501 7032 1157 518 8024 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 31 6 16 16 16 16 16 16 16 16 16 16 16 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 6 16 16 16 16 16 31 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: train-4
+tokens: [CLS] 布 鲁 京 斯 研 究 所 桑 顿 中 国 中 心 研 究 部 主 任 李 成 说 ， 东 亚 的 和 平 与 安 全 ， 是 美 国 的 [UNK] 核 心 利 益 [UNK] 之 一 。 [SEP]
+input_ids: 101 2357 7826 776 3172 4777 4955 2792 3433 7561 704 1744 704 2552 4777 4955 6956 712 818 3330 2768 6432 8024 691 762 4638 1469 2398 680 2128 1059 8024 3221 5401 1744 4638 100 3417 2552 1164 4660 100 722 671 511 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label_ids: 31 8 18 18 18 18 18 18 18 18 18 18 18 18 9 19 19 19 19 7 17 31 31 31 31 31 31 31 31 31 31 31 31 1 11 31 31 31 31 31 31 31 31 31 31 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Writing example 10000 of 10748
+Saving features into cached file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/datasets/cluener/cached_crf-train_bert-base_128_cluener
+***** Running training *****
+  Num examples = 10748
+  Num Epochs = 4
+  Instantaneous batch size per GPU = 24
+  Total train batch size (w. parallel, distributed & accumulation) = 24
+  Gradient Accumulation steps = 1
+  Total optimization steps = 1792

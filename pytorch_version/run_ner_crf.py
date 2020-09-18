@@ -369,7 +369,7 @@ def load_and_cache_examples(args, task, tokenizer, data_type='train'):
 
 def main():
     args = get_argparse().parse_args()
-
+    print(args)
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
     args.output_dir = args.output_dir + '{}'.format(args.model_type)

@@ -1,0 +1,49 @@
+Process rank: -1, device: cpu, n_gpu: 0, distributed training: False, 16-bits training: False
+loading configuration file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/config.json
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 34,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 21128
+}
+
+Model name '/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base' is a path or url to a directory containing tokenizer files.
+Didn't find file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/added_tokens.json. We won't load it.
+Didn't find file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/special_tokens_map.json. We won't load it.
+Didn't find file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/tokenizer_config.json. We won't load it.
+loading file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/vocab.txt
+loading file None
+loading file None
+loading file None
+loading weights file /Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base/pytorch_model.bin
+Weights of BertCrfForNer not initialized from pretrained model: ['classifier.weight', 'classifier.bias', 'crf.start_transitions', 'crf.end_transitions', 'crf.transitions']
+Weights from pretrained model not used in BertCrfForNer: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, adv_epsilon=1.0, adv_name='word_embeddings', cache_dir='', config_name='', crf_learning_rate=0.001, data_dir='/cluener/', device=device(type='cpu'), do_adv=False, do_eval=True, do_lower_case=True, do_predict=False, do_train=True, eval_all_checkpoints=False, eval_max_seq_length=512, evaluate_during_training=False, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, id2label={0: 'X', 1: 'B-address', 2: 'B-book', 3: 'B-company', 4: 'B-game', 5: 'B-government', 6: 'B-movie', 7: 'B-name', 8: 'B-organization', 9: 'B-position', 10: 'B-scene', 11: 'I-address', 12: 'I-book', 13: 'I-company', 14: 'I-game', 15: 'I-government', 16: 'I-movie', 17: 'I-name', 18: 'I-organization', 19: 'I-position', 20: 'I-scene', 21: 'S-address', 22: 'S-book', 23: 'S-company', 24: 'S-game', 25: 'S-government', 26: 'S-movie', 27: 'S-name', 28: 'S-organization', 29: 'S-position', 30: 'S-scene', 31: 'O', 32: '[START]', 33: '[END]'}, label2id={'X': 0, 'B-address': 1, 'B-book': 2, 'B-company': 3, 'B-game': 4, 'B-government': 5, 'B-movie': 6, 'B-name': 7, 'B-organization': 8, 'B-position': 9, 'B-scene': 10, 'I-address': 11, 'I-book': 12, 'I-company': 13, 'I-game': 14, 'I-government': 15, 'I-movie': 16, 'I-name': 17, 'I-organization': 18, 'I-position': 19, 'I-scene': 20, 'S-address': 21, 'S-book': 22, 'S-company': 23, 'S-game': 24, 'S-government': 25, 'S-movie': 26, 'S-name': 27, 'S-organization': 28, 'S-position': 29, 'S-scene': 30, 'O': 31, '[START]': 32, '[END]': 33}, learning_rate=3e-05, local_rank=-1, logging_steps=448, loss_type='ce', markup='bios', max_grad_norm=1.0, max_steps=-1, model_name_or_path='/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/prev_trained_model/bert-base', model_type='bert', n_gpu=0, no_cuda=False, num_train_epochs=4.0, output_dir='/Users/wk/Documents/GitHub/CLUENER2020/pytorch_version/outputs/cluener_output/bert', overwrite_cache=False, overwrite_output_dir=True, per_gpu_eval_batch_size=24, per_gpu_train_batch_size=24, predict_checkpoints=0, save_steps=448, seed=42, server_ip='', server_port='', task_name='cluener', tokenizer_name='', train_max_seq_length=128, warmup_proportion=0.1, weight_decay=0.01)
+Creating features from dataset file at /cluener/
